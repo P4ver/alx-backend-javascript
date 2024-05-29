@@ -2,9 +2,11 @@
   "name": "0x01-es6_promise",
   "version": "1.0.0",
   "description": "ES6 Promises",
+  "type": "module",
   "main": "0-main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node"
   },
   "devDependencies": {
     "@babel/core": "^7.6.0",
