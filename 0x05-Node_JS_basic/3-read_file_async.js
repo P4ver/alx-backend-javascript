@@ -1,13 +1,14 @@
 const fs = require('fs');
 
+
 function countStudents(path) {
-  const prmise = (res, rej) => {
+  const prmse = (res, rej) => {
     fs.readFile(path, (err, data) => {
       if (err) rej(Error('Cannot load the database'));
       if (data) {
-        let nw_Data = data.toString().split('\n');
-        nw_Data = nw_Data.slice(1, nw_Data.length - 1);
-        console.log(`Number of students: ${nw_Data.length}`);
+        let newData = data.toString().split('\n');
+        newData = newData.slice(1, newData.length - 1);
+        console.log(`Number of students: ${newData.length}`);
         const obj = {};
         newData.forEach((el) => {
           const student = el.split(',');
@@ -21,7 +22,7 @@ function countStudents(path) {
       res();
     });
   };
-  return new Promise(prmise);
+  return new Promise(prmse);
 }
 
 module.exports = countStudents;
