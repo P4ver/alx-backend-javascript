@@ -6,8 +6,8 @@ function countStudents(path) {
       if (err) rej(Error('Cannot load the database'));
       if (data) {
         let nw_Data = data.toString().split('\n');
-        newData = nw_Data.slice(1, nw_Data.length - 1);
-        console.log(`Number of students: ${newData.length}`);
+        nw_Data = nw_Data.slice(1, nw_Data.length - 1);
+        console.log(`Number of students: ${nw_Data.length}`);
         const obj = {};
         newData.forEach((el) => {
           const student = el.split(',');
