@@ -2,8 +2,8 @@ const fs = require('fs');
 
 function countStudents(path) {
   try {
-    let data_f = fs.readFileSync(path, 'utf8').toString().split('\n');
-    data = data_f.slice(1, data_f.length - 1);
+    let data = fs.readFileSync(path, 'utf8').toString().split('\n');
+    data = data.slice(1, data.length - 1);
     console.log(`Number of students: ${data.length}`);
     const obj = {};
     data.forEach((el) => {
